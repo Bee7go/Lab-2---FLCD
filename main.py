@@ -21,14 +21,17 @@ class AlphabeticallySortedST:
     def __init__(self):
         self.list = []
 
-    #returns 1 if the key already exists in our sorted symbol table and 0 otherwise
+    #returns the position of the key if it already exists in our sorted symbol table and -1 otherwise
     def checkIfElementExists(self, pair):
         for i in range(len(self.list)):
-            if self.list[i].getKey() == pair.getKey():
-                return 1
-        return 0
+            if self.list[i].getKey() <= pair.getKey():
+                if self.list[i].getKey() == pair.getKey():
+                    return i
+            else:
+                return -1
 
     # adds new element in the table (if the key doesn't exists already)  so that the list keeps it's sorted property
+    # returns -1 if element doesn't exist and it's position in list otherwise
     def addElement(self, pair):
         for i in range(len(self.list)):
             if self.list[i].getKey() == pair.getKey():
@@ -36,7 +39,9 @@ class AlphabeticallySortedST:
             if self.list[i].getKey() > pair.getKey():
                 self.list.insert(i, pair)
                 return
-        self.list.append(pair) #in case our list is empty
+        # in case our list is empty:
+        self.list.append(pair)
+
 
     #returns the alphabetically sorted symbol table
     def getList(self):
@@ -44,6 +49,7 @@ class AlphabeticallySortedST:
 
 
 if __name__ == '__main__':
+    #TEST:
     elem1 = Pair('a', '100')
     elem2 = Pair('b', '200')
     elem3 = Pair('d', '250')
@@ -57,4 +63,4 @@ if __name__ == '__main__':
     mySortedList.addElement(elem5)
     for element in mySortedList.getList():
         print(element.getKey())
-    print(mySortedList.checkIfElementExists(elem5))
+    print(mySortedList.checkIfElementExists(elem3))
