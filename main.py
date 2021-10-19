@@ -48,6 +48,18 @@ class AlphabeticallySortedST:
         return self.list
 
 
+class Scanner:
+    def detectNextToken(self):
+        return
+
+    def classifyToken(self):
+        return
+
+    def codifyToken(self):
+        return
+
+
+
 if __name__ == '__main__':
     #TEST:
     elem1 = Pair('a', '100')
@@ -64,3 +76,4 @@ if __name__ == '__main__':
     for element in mySortedList.getList():
         print(element.getKey())
     print(mySortedList.checkIfElementExists(elem3))
+

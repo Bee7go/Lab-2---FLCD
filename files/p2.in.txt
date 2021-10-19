@@ -1,0 +1,6 @@
+simpleChar my_char ==> 'a' /
+complexChar my_word ==> "macaroane" /
+posInt counter ==> 0 /
+for each char in complexChar ::>
+	if char <==> my_char ::>
+		counter  ==> counter + 1 /
