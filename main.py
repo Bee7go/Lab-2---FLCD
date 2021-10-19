@@ -47,13 +47,44 @@ class AlphabeticallySortedST:
     def getList(self):
         return self.list
 
-
 class Scanner:
+    def __init__(self, problem):
+        self.problem = problem
+        self.line = []
+
+    def __iter__(self):
+        return self
+
     def detectNextToken(self):
+        while not len(self.line):
+            self.line = self.problem.readline()
+            if not self.line:
+                return 0
+            self.line = self.line.split()
+        return self.line.pop(0)
+
+    def checkIfIdentifier(self, token):
         return
 
-    def classifyToken(self):
+    def checkIfConstant(self, token):
         return
+
+    def checkIfReservedWord(self,token):
+        return
+
+    def checkIfSepartor(self,token):
+        return
+
+    def checkIfOperator(self,token):
+        return
+
+    def classifyToken(self, currentToken):
+        if self.checkIfSepartor(currentToken): return 0 #separator
+        if self.checkIfOperator(currentToken): return 1 #operator
+        if self.checkIfReservedWord(currentToken): return 2 #reserved-word
+        if self.checkIfConstant(currentToken): return 3 #constant
+        if self.checkIfIdentifier(currentToken): return 4 #identifier
+        return 5 #lexical error
 
     def codifyToken(self):
         return
@@ -73,7 +104,15 @@ if __name__ == '__main__':
     mySortedList.addElement(elem2)
     mySortedList.addElement(elem1)
     mySortedList.addElement(elem5)
-    for element in mySortedList.getList():
-        print(element.getKey())
-    print(mySortedList.checkIfElementExists(elem3))
+    # for element in mySortedList.getList():
+    #     print(element.getKey())
+    # print(mySortedList.checkIfElementExists(elem3))
+
+    myScanner = Scanner(open("files/p2.in"))
+
+    currentToken = myScanner.detectNextToken()
+    while currentToken:
+        print(currentToken)
+        currentToken = myScanner.detectNextToken()
+   # print(myScanner.detectNextToken())
 
