@@ -1,0 +1,8 @@
+posList my_list ==> [[-14,2,6,19,21,24,27]]  /
+int current_number ==> 'a' /
+bubble is_positive ==> yes /
+for each element in my_list ::>
+	 if current_number > element ::>
+		is_positive ==> no /
+	else ::>
+		current_number ==> element /

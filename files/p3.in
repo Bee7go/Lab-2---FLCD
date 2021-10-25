@@ -1,0 +1,7 @@
+posInt n ==> 6 /
+posInt sum ==> 0 /
+posInt current_odd_number ==> 2 /
+as long as n <!!> 0 ::>
+	sum  ==> sum + current_odd_number /
+	n ==> n - 1 /
+	current_odd_number ==> current_odd_number + 2 /
