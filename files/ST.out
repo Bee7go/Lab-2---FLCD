@@ -1,8 +1,8 @@
-"macaroane" 4
-'a' 2
-0 6
-1 8
-char 7
-counter 5
-my_char 1
-my_word 3
+0 4
+[[2,6,19,21,24,27]] 2
+current_number 3
+element 7
+is_positive 5
+list_to_check 1
+no 8
+yes 6

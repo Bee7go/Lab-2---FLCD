@@ -1,5 +1,5 @@
-posList my_list ==> [[-14,2,6,19,21,24,27]]  /
-int current_number ==> 'a' /
+posList my_list ==> [6,2,6,19,21,24,27]]  /
+int current_number ==> '0 /
 bubble is_positive ==> yes /
 for each element in my_list ::>
 	 if current_number > element ::>

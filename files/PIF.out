@@ -1,32 +1,36 @@
-simpleChar 0
-my_char 1
-==> 0
-'a' 2
-/ 0
-complexChar 0
-my_word 3
-==> 0
-"macaroane" 4
-/ 0
-posInt 0
-counter 5
-==> 0
-0 6
-/ 0
-for 0
-each 0
-char 7
-in 0
-my_word 3
-::> 0
-if 0
-char 7
-<==> 0
-my_char 1
-::> 0
-counter 5
-==> 0
-counter 5
-+ 0
-1 8
-/ 0
+reserved-word posList 0
+identifier list_to_check 1
+operator ==> 0
+constant [[2,6,19,21,24,27]] 2
+separator / 0
+reserved-word int 0
+identifier current_number 3
+operator ==> 0
+constant 0 4
+separator / 0
+reserved-word bubble 0
+identifier is_positive 5
+operator ==> 0
+constant yes 6
+separator / 0
+reserved-word for 0
+reserved-word each 0
+identifier element 7
+reserved-word in 0
+identifier list_to_check 1
+separator ::> 0
+reserved-word if 0
+identifier current_number 3
+operator > 0
+identifier element 7
+separator ::> 0
+identifier is_positive 5
+operator ==> 0
+constant no 8
+separator / 0
+reserved-word else 0
+separator ::> 0
+identifier current_number 3
+operator ==> 0
+identifier element 7
+separator / 0
